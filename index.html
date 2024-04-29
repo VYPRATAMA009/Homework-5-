@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Work 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="body">
+
+
+
+  <nav class="navbar">
+    <div  class="container-fluid justify-content-center ">
+      <div class="btn-group-center">
+        <button type="button" class="btn btn-primary" onclick="pindahTab('Registrasi')">Registrasi</button>
+        <button type="button" class="btn btn-primary" onclick="pindahTab('ListPendaftar')">List</button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="Registrasi" class="tab active-tab">
+        <h1 class="text-center">Registrasi</h1>
+      <form id="FormRegistrasi" onsubmit="return inputValidasi()">
+        <div class="card-body text-center">
+          <label for="nama"><strong>Nama :</strong></label>
+          <input type="text" id="nama" placeholder="Minimal 10 karakter" />
+          <br /><br />
+          <label for="umur"><strong>Umur :</strong></label>
+          <input type="number" id="umur" name="umur"placeholder="Minimal umur 25 Tahun" />
+          <br /><br />
+          <label for="uangsangu"><strong>Uang Sangu :</strong></label>
+          <input type="number"id="uangsangu"name="uangsangu" placeholder="minimal 100 ribu, maksimal 1 juta" style="width: 300px" />
+          <br /><br />
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="ListPendaftar" class="tab">
+        <h1 class="text-center">Tabel List Pendaftar</h1>
+        <table class="daftar table table-hover w-50 mx-auto table-secondary">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Umur</th>
+              <th>Uang Sangu</th>
+            </tr>
+          </thead>
+          <tbody id="tabelpendaftar">
+          </tbody>
+        </table>
+        <div class="text-center">
+          <br /><br />
+          <p>
+            Rata-rata pendaftar memiliki uang saku sebesar <span id="ratauangsangu">0</span> dengan rata-rata umur <span id="rataumur">0</span>
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.body {
+    background-color: #aae1dd;
+  }
+  
+  .tab {
+    display: none;
+  }
+  
+  .active-tab {
+    display: block;
+  }
